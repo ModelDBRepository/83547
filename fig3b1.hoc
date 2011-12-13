@@ -51,7 +51,7 @@ forall ion_style("na_ion", 2,2,0,0,0)
 access soma			/* All default references are to soma */
 
 objectvar syn[nsyn]		/* Declare the object variables for
-		1G		 * the three synapses */
+				 * the three synapses */
 objectvar stim
 objectvar vc
 objref cvode

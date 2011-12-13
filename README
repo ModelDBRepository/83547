@@ -1,0 +1,58 @@
+This is the readme for the model associated with the paper:
+
+Komendantov AO, Komendantova OG, Johnson SW, Canavier CC (2004) A
+modeling study suggests complementary roles for GABAA and NMDA
+receptors and the SK channel in regulating the firing pattern in
+midbrain dopamine neurons. J Neurophysiol 91:346-57
+
+Midbrain dopaminergic (DA) neurons in vivo exhibit two major firing
+patterns: single-spike firing and burst firing. The firing pattern
+expressed is dependent on both the intrinsic properties of the neurons
+and their excitatory and inhibitory synaptic inputs. Experimental data
+suggest that the activation of N-methyl-D-aspartate (NMDA) and GABAA
+receptors is a crucial contributor to the initiation and suppression
+of burst firing, respectively, and that blocking Ca(2+)-activated
+potassium SK channels can facilitate burst firing. A
+multi-compartmental model of a DA neuron with a branching structure
+was developed and calibrated based on in vitro experimental data to
+explore the effects of different levels of activation of NMDA and
+GABAA receptors as well as the modulation of the SK current on the
+firing activity. The simulated tonic activation of GABAA receptors was
+calibrated by taking into account the difference in the electrotonic
+properties in vivo versus in vitro. Although NMDA-evoked currents are
+required for burst generation in the model, currents evoked by
+GABAA-receptor activation can also regulate the firing pattern. For
+example, the model predicts that increasing the level of NMDA receptor
+activation can produce excessive depolarization that prevents burst
+firing, but a concurrent increase in the activation of GABAA receptors
+can restore burst firing. Another prediction of the model is that
+blocking the SK channel current in vivo will facilitate bursting, but
+not as robustly as blocking the GABAA receptors.
+
+These model files were supplied by Anna Kuznetsova
+
+Usage:
+Auto-launch from ModelDB to for a graphical interface to the model.
+
+If you have installed NEURON with mpi on x86_64 systems you can double
+check that
+/usr/local/neuron/x86_64/bin is in your path
+To compile the code (under unix) type:
+
+nrnivmodl
+
+In order to run the code:
+if you want a graphical user interface set back = 0 in damodel.hoc
+then type:
+
+x86_64/special damodel.hoc -
+
+and hit the init and run button
+
+to run simulations in the background set back = 1
+mpirun -nolocal x86_64/special damodel.hoc>& myfile.dat&
+(This prints soma and dendrite voltages and some currents to myfile.dat)
+
+Run in the background generates state.new file. To restart from these last data
+copy state.new over state.old and set restart = 1 in damodel.hoc. (This works
+both for GUI and background).  

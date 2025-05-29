@@ -2,7 +2,7 @@
 
 Komendantov AO, Komendantova OG, Johnson SW, Canavier CC (2004) A modeling study suggests complementary roles for GABAA and NMDA receptors and the SK channel in regulating the firing pattern in midbrain dopamine neurons. *J Neurophysiol* 91:346-57
 
-## Background
+## Abstract
 
 Midbrain dopaminergic (DA) neurons in vivo exhibit two major firing patterns: single-spike firing and burst firing. The firing pattern expressed is dependent on both the intrinsic properties of the neurons and their excitatory and inhibitory synaptic inputs. Experimental data suggest that the activation of N-methyl-D-aspartate (NMDA) and GABAA receptors is a crucial contributor to the initiation and suppression of burst firing, respectively, and that blocking Ca(2+)-activated potassium SK channels can facilitate burst firing.
 
@@ -42,7 +42,7 @@ mpirun -nolocal x86_64/special damodel.hoc >& myfile.dat &
 
 (This prints soma and dendrite voltages and some currents to `myfile.dat`)
 
-Run in the background generates `state.new` file. To restart from these last data copy `state.new` over `state.old` and set `restart = 1` in `damodel.hoc`. (This works both for GUI and background).
+Run in the background generates `state.new` file. To restart from these last data, copy `state.new` over `state.old` and set `restart = 1` in `damodel.hoc`. (This works both for GUI and background).
 
 ---
 
